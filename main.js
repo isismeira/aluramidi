@@ -33,4 +33,17 @@ while (contador < listaDeTeclas.length) {
 
     // +1 é adicionado ao contador, que permitirá que o loop se repita ate todos os elementos da lista entrem no loop
     contador++
+
+    
+    tecla.onkeydown = function (evento) {
+
+        if (evento.code === 'Space' || evento.code === 'Enter') {
+            tecla.classList.add('ativa');
+        }
+
+    }
+
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
 }
