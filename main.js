@@ -34,16 +34,20 @@ while (contador < listaDeTeclas.length) {
     // +1 é adicionado ao contador, que permitirá que o loop se repita ate todos os elementos da lista entrem no loop
     contador++
 
-    
+    //quando uma tecla for apertada, o seguinte evento denterminado pela função acontecerá:
     tecla.onkeydown = function (evento) {
 
+        //se a apertarmos no teclado espaço ou enter
         if (evento.code === 'Space' || evento.code === 'Enter') {
+            //será adicionado na classe da tecla o atributo 'ativa', que pintará a tecla de outra cor
             tecla.classList.add('ativa');
         }
 
     }
 
+    //Quando um tecla for soltada:
     tecla.onkeyup = function () {
+        //será removido o atributo 'ativa', que fará com que a tecla volte para sua cor normal
         tecla.classList.remove('ativa');
     }
 }
